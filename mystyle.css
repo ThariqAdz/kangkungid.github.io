@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #393E46;
+    color: #f4f4f4;
+    line-height: 1.6;
+    margin: 0;
+}
+
+nav {
+    background-color: #222831;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #FFD369; /* Garis pembatas di atas footer */
+}
+
+nav .logo {
+    font-size: 20px; /* Mengurangi ukuran font untuk kesederhanaan */
+}
+
+nav .logo a {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+nav .logo span {
+    color: #FFD369; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FFD369; /* Mengubah warna saat hover */
+}
+
+
+/* Flexbox Container */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 380px 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 1600px;
+    margin: 25px auto;
+    padding: 0 20px;
+    grid-template-areas: 
+        "headline side iklan"
+        "berita side iklan";
+}
+
+.beritautama {
+    grid-area: headline;
+    position: relative; /* Menjadikan .beritautama sebagai container posisi */
+}
+
+.beritautama img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.beritautama h2 {
+    position: absolute; /* Mengatur posisi secara absolut di atas gambar */
+    bottom: 20px; /* Jarak dari bagian bawah gambar */
+    left: 20px; /* Jarak dari bagian kiri gambar */
+    right: 20px; /* Jarak dari bagian kanan gambar */
+    color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.7); /* Background warna hitam dengan transparansi */
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1; /* Memastikan h2 berada di atas gambar */
+}
+
+
+
+/* class popular */
+.popular {
+    grid-area: side;
+    margin-bottom: 20px;
+}
+
+.popular h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.popular ul {
+    list-style: none;
+    counter-reset: list;
+    padding-left: 0;
+}
+
+.popular ul li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    counter-increment: list;
+}
+.popular ul li span {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #FFD369;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222831; 
+    font-weight: bold;
+}
+
+.popular ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.popular ul li a:hover {
+    color: #FFD369;
+}
+
+.popular p {
+    color: #FFD369;
+}
+
+/* class iklan */
+.iklan {
+    grid-area: iklan;
+    max-width: 100%;
+}
+
+.iklan img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* class berita */
+.berita {
+    grid-area: berita;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.berita p{
+    max-width: 200px;
+    word-wrap: break-word;
+    margin: 0;
+    font-size: smaller;
+    transition: color 0.3s ease;
+}
+
+.tema {
+    color: #FFD369; 
+}
+.berita img{
+    border-radius: 8px;
+    width: 200px;
+}
+
+.berita p:hover {
+    color: #FFD369; /* Warna kuning saat hover */
+}
+/* footer */
+/* footer */
+footer {
+    background-color: #222831;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 40px;
+    border-top: 2px solid #FFD369; /* Garis pembatas di atas footer */
+}
+  
+footer h4 {
+    margin-bottom: 10px; /* Jarak antara h4 dan konten berikutnya */
+    font-size: 1.5rem; /* Ukuran font h4 yang lebih besar */
+    color: #f4f4f4;/* Warna teks h4 */
+    font-weight: bold; /* Membuat teks lebih tebal */
+}
+  
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Jarak antara ikon sosial */
+    margin-top: 10px; /* Jarak antara h4 dan ikon sosial */
+}
+  
+footer .social-links a img {
+    height: 40px; /* Ukuran ikon sosial yang lebih besar */
+}
+  
+
+  /* Akhir footer */
+  
